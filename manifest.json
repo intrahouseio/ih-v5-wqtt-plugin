@@ -1,0 +1,15 @@
+{
+  "id": "wqtt",
+  "description": "WQTT Platform Plugin",
+  "module": "index.js",
+  "service": "integration",
+  "servicename": "WQTT",
+  "i_devices":1,
+  "i_types":1,
+  "single": 1,
+  "nochannels": 1,
+  "chdefault": {
+  },
+  "ext": [
+  ]
+}
