@@ -1,0 +1,779 @@
+{
+  "spacing": 10,
+  "grid": [
+    {
+      "id": "main",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices"
+    },
+    {
+      "id": "Lamp",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Lamp' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Lamp_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Lamp' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Socket",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Socket' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Socket_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Socket' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Termoregulator",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Termoregulator' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Termoregulator_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Termoregulator' ?  true : data.main.inherit"
+    },
+    {
+      "id": "AirCond",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'AirCond' ?  true : data.main.inherit"
+    },
+    {
+      "id": "AirCond_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'AirCond' ?  true : data.main.inherit"
+    },
+    {
+      "id": "DoorGate",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'DoorGate' ?  true : data.main.inherit"
+    },
+    {
+      "id": "DoorGate_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'DoorGate' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Curtain",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Curtain' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Curtain_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Curtain' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Media",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Media' ?  true : data.main.inherit"
+    },
+    {
+      "id": "Media_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'Media' ?  true : data.main.inherit"
+    },
+    {
+      "id": "SensorValue_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'SensorValue' ?  true : data.main.inherit"
+    },
+    {
+      "id": "SensorEvent_status",
+      "xs": 4,
+      "class": "main",
+      "table": "_devices",
+      "hide": "data.main.devtype.id != 'SensorEvent' ?  true : data.main.inherit"
+    }
+  ],
+  "main": [
+    {
+      "prop": "active",
+      "title": "Активировать",
+      "type": "cb"
+    },
+    {
+      "prop": "inherit",
+      "title": "Наследовать настройки из типа",
+      "type": "cb"
+    },
+    {
+      "prop": "Name",
+      "title": "Имя",
+      "type": "text",
+      "hide": true
+    },
+    {
+      "prop": "room",
+      "title": "Комната (Умный дом Яндекс)",
+      "type": "input"
+    },
+    {
+      "prop": "devtype",
+      "title": "Тип устройства",
+      "type": "droplist",
+      "data": [
+        {
+          "id": "Lamp",
+          "title": "Лампа"
+        },
+        {
+          "id": "Socket",
+          "title": "Розетка"
+        },
+        {
+          "id": "Termoregulator",
+          "title": "Терморегулятор"
+        },
+        {
+          "id": "AirCond",
+          "title": "Кондиционер"
+        },
+        {
+          "id": "DoorGate",
+          "title": "Дверь / Ворота"
+        },
+        {
+          "id": "Curtain",
+          "title": "Штора / Жалюзи"
+        },
+        {
+          "id": "Media",
+          "title": "Медиа"
+        },
+        {
+          "id": "SensorValue",
+          "title": "Сенсор значение"
+        },
+        {
+          "id": "SensorEvent",
+          "title": "Сенсор событие"
+        }
+      ],
+      "hide": "data.main.inherit"
+    },
+    {
+      "prop": "alicetype",
+      "title": "Тип устройства в Умный дом Яндекс",
+      "type": "droplist",
+      "data": [
+        {
+          "id": 0,
+          "title": "Лампа"
+        },
+        {
+          "id": 1,
+          "title": "Розетка"
+        },
+        {
+          "id": 2,
+          "title": "Переключатель"
+        },
+        {
+          "id": 3,
+          "title": "Терморегулятор"
+        },
+        {
+          "id": 4,
+          "title": "Кондиционер"
+        },
+        {
+          "id": 5,
+          "title": "Медиа"
+        },
+        {
+          "id": 6,
+          "title": "TV"
+        },
+        {
+          "id": 7,
+          "title": "Чайник"
+        },
+        {
+          "id": 8,
+          "title": "Кофемашина"
+        },
+        {
+          "id": 9,
+          "title": "Мультиварка"
+        },
+        {
+          "id": 10,
+          "title": "Кухонная техника"
+        },
+        {
+          "id": 11,
+          "title": "Штора / Жалюзи"
+        },
+        {
+          "id": 12,
+          "title": "Дверь / Ворота"
+        },
+        {
+          "id": 13,
+          "title": "Увлажнитель воздуха"
+        },
+        {
+          "id": 14,
+          "title": "Очиститель воздуха"
+        },
+        {
+          "id": 15,
+          "title": "Робот пылесос"
+        },
+        {
+          "id": 16,
+          "title": "Стиральная машина"
+        },
+        {
+          "id": 17,
+          "title": "Посудомоечная машина"
+        },
+        {
+          "id": 18,
+          "title": "Парогенератор"
+        },
+        {
+          "id": 19,
+          "title": "Сенсор"
+        },
+        {
+          "id": 20,
+          "title": "Поилка"
+        },
+        {
+          "id": 21,
+          "title": "Кормушка"
+        },
+        {
+          "id": 22,
+          "title": "Счетчик"
+        }
+      ],
+      "hide": "data.main.inherit"
+    },
+    {
+      "prop": "mqttPrefix",
+      "title": "MQTT префикс",
+      "type": "input",
+      "hide": "data.main.inherit"
+    }
+  ],
+  "Lamp": [
+    {
+      "sid": "Lamp",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp",
+      "title": "bright *",
+      "prop": "bright",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp",
+      "title": "RGB *",
+      "prop": "rgb",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp",
+      "title": "collor temp *",
+      "prop": "collorTemp",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Lamp_status": [
+{
+      "sid": "Lamp_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp_status",
+      "title": "bright status *",
+      "prop": "bright_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp_status",
+      "title": "RGB status *",
+      "prop": "rgb_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Lamp_status",
+      "title": "collor temp status *",
+      "prop": "collorTemp_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Socket": [
+    {
+      "sid": "Socket",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Socket_status": [
+    {
+      "sid": "Socket_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Termoregulator": [
+    {
+      "sid": "Termoregulator",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator",
+      "title": "mode * ",
+      "prop": "mode",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator",
+      "title": "setpoint * ",
+      "prop": "setpoint",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator",
+      "title": "fanspeed *",
+      "prop": "fanspeed",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Termoregulator_status": [
+{
+      "sid": "Termoregulator_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator_status",
+      "title": "mode status * ",
+      "prop": "mode_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator_status",
+      "title": "setpoint status *",
+      "prop": "setpoint_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator_status",
+      "title": "fanspeed status *",
+      "prop": "fanspeed_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Termoregulator_status",
+      "title": "temp status *",
+      "prop": "temp_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "AirCond": [
+    {
+      "sid": "AirCond",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond",
+      "title": "setpoint *",
+      "prop": "setpoint",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond",
+      "title": "fanspeed *",
+      "prop": "fanspeed",
+      "type": "droplist",
+      "data": "__devprop"
+    }, 
+    {
+      "sid": "AirCond",
+      "title": "mode *",
+      "prop": "mode",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond",
+      "title": "fan *",
+      "prop": "fan",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond",
+      "title": "swing *",
+      "prop": "swing",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "AirCond_status": [
+    {
+      "sid": "AirCond_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "setpoint status *",
+      "prop": "setpoint_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "fanspeed status *",
+      "prop": "fanspeed_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "mode status*",
+      "prop": "mode_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "fan status *",
+      "prop": "fan_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "temp status *",
+      "prop": "temp_status",
+      "type": "droplist",
+      "data": "__devcmd"
+    },
+    {
+      "sid": "AirCond_status",
+      "title": "swing status *",
+      "prop": "swing_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+   "DoorGate": [
+    {
+      "sid": "DoorGate",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "DoorGate_status": [
+    { 
+      "sid": "DoorGate_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+  "Curtain": [
+    {
+      "sid": "Curtain",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Curtain",
+      "title": "position *",
+      "prop": "position",
+      "type": "droplist",
+      "data": "__devprop"
+    }  
+  ],
+  "Curtain_status": [
+    {
+      "sid": "Curtain_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Curtain_status",
+      "title": "position status *",
+      "prop": "position_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+  ],
+   "Media": [
+    {
+      "sid": "Media",
+      "title": "state *",
+      "prop": "state",
+      "type": "droplist",
+      "data": "__devprop"
+    },   
+    {
+      "sid": "Media",
+      "title": "volume *",
+      "prop": "volume",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Media",
+      "title": "mute *",
+      "prop": "mute",
+      "type": "droplist",
+      "data": "__devprop"
+    }   
+  ],
+  "Media_status": [
+    {
+      "sid": "Media_status",
+      "title": "state status *",
+      "prop": "state_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Media_status",
+      "title": "volume status *",
+      "prop": "volume_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "Media_status",
+      "title": "mute status *",
+      "prop": "mute_status",
+      "type": "droplist",
+      "data": "__devprop"
+    }
+   ],
+  "SensorValue_status": [
+    {
+      "sid": "SensorValue_status",
+      "title": "value status *",
+      "prop": "value_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "SensorValue_status",
+      "title": "Величина",
+      "prop": "metricunit",
+      "type": "droplist",
+      "data": [
+      {
+        "id": 0,
+        "title": "Температура"
+      },
+      {
+        "id": 1,
+        "title": "Влажность"
+      },
+      {
+        "id": 2,
+        "title": "Углекислый газ"
+      },
+      {
+        "id": 3,
+        "title": "Напряжение"
+      },
+      {
+        "id": 4,
+        "title": "Потребление тока"
+      },
+      {
+        "id": 5,
+        "title": "Потребляемая мощность"
+      },
+      {
+        "id": 6,
+        "title": "Заряд аккумулятора"
+      },
+      {
+        "id": 7,
+        "title": "Уровень воды"
+      },
+      {
+        "id": 8,
+        "title": "Давление - (mm Hg)"
+      },
+
+      {
+        "id": 9,
+        "title": "Давление - (Pa)"
+      },
+      {
+        "id": 10,
+        "title": "Давление - (Бар)"
+      },
+      {
+        "id": 11,
+        "title": "Освещенность"
+      },
+      {
+        "id": 12,
+        "title": "Частицы PM1"
+      },
+      {
+        "id": 13,
+        "title": "Частицы PM2.5"
+      },
+      {
+        "id": 14,
+        "title": "Частицы PM10"
+      },
+      {
+        "id": 15,
+        "title": "Органические вещества"
+      },
+      {
+        "id": 16,
+        "title": "Уровень корма"
+      },
+      {
+        "id": 17,
+        "title": "Счетчик электроэнергии"
+      },
+      {
+        "id": 18,
+        "title": "Счетчик газа"
+      },
+      {
+        "id": 19,
+        "title": "Счетчик тепла"
+      },
+      {
+        "id": 20,
+        "title": "Счетчик воды"
+      },
+      {
+        "id": 21,
+        "title": "Счетчик универсальный"
+      }
+    ]
+    }
+  ],
+  "SensorEvent_status": [
+    {
+      "sid": "SensorEvent_status",
+      "title": "event status *",
+      "prop": "event_status",
+      "type": "droplist",
+      "data": "__devprop"
+    },
+    {
+      "sid": "SensorEvent_status",
+      "title": "Событие",
+      "prop": "eventunit",
+      "type": "droplist",
+      "data": [
+      {
+        "id": 0,
+        "title": "Кнопка"
+      },
+      {
+        "id": 1,
+        "title": "Открытие"
+      },
+      {
+        "id": 2,
+        "title": "Движение"
+      },
+      {
+        "id": 3,
+        "title": "Дым"
+      },
+      {
+        "id": 4,
+        "title": "Газ"
+      },
+      {
+        "id": 5,
+        "title": "Протечка воды"
+      }
+    ]
+    }
+  ]
+}
